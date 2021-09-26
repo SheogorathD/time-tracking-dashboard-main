@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: hsl(226, 43%, 10%);
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: aliceblue;
+}
+.container{
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 98vh;
+}
+
+.report-for,
+.work,
+.play,
+.study,
+.exercise,
+.social,
+.self-care{
+    width: 300px;
+    border-radius: 20px;
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.work,
+.play,
+.study,
+.exercise,
+.social,
+.self-care{
+    height: 256px;
+}
+
+.activities{
+    width: 1050px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.inner{
+    background-color: hsl(235, 46%, 20%);
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    bottom: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+}
+
+.current-time{
+    position: absolute;
+    font-size: 72px;
+    line-height: 1.75;
+}
+
+.report-buttons{
+    background-color: hsl(235, 46%, 20%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.report-for{
+    height: 542px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.report-for .report-inner {
+    background-color: hsl(246, 80%, 60%);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 70%;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.report-for .report-inner img {
+    width: 100px;
+    border: 5px solid white;
+    border-radius: 100%;
+}
+
+.report {
+    color: hsl(236, 100%, 87%);
+    margin: 30px 0 0 0;
+}
+
+.name {
+    font-size: 48px;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 0;
+}
+
+a {
+    color: hsl(236, 100%, 87%);
+    text-decoration: none;
+}
+
+.report-buttons .buttons .inside{
+    display: flex;
+    flex-flow: column wrap;
+    line-height: 2;
+}
+
+.work .back{
+    background-color: hsl(15, 100%, 70%);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.play .back{
+    background-color: hsl(195, 74%, 62%);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.study .back{
+    background-color: hsl(348, 100%, 68%);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.exercise .back{
+    background-color: hsl(145, 58%, 55%);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.social .back{
+    background-color: hsl(264, 64%, 52%);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.self-care .back{
+    background-color: hsl(43, 84%, 65%);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.back{
+    height: 50%;
+
+}
+
+.work img,
+.play img,
+.study img,
+.exercise img,
+.social img,
+.self-care img{
+    position: relative;
+    margin-left: 210px;
+    align-items: center;
+}
+
+.work,
+.play,
+.study,
+.exercise,
+.social,
+.self-care{
+    overflow: hidden;
+}
+
+.inside{
+    padding: 25px;
+}
+
+.dots, .dots:after, .dots:before {
+    background: hsl(236, 100%, 87%);
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+}
+
+.dots {
+    right: 30px;
+    top: 32px;
+}
+
+.dots:after, .dots:before {
+    content: "";
+}
+
+.dots:after {
+    left: 10px;
+}
+
+.dots:before {
+    right: 10px;
+}
+
+.daily,
+.weekly,
+.monthly {
+    display: none;
+}
+
+.show {
+    display: inline-block;
+}
+
+.active {
+    color: aliceblue;
+}
+
+.last-time {
+    position: absolute;
+    bottom: 30px;
+    color: hsl(236, 100%, 87%);
+}
+
+
+.activity-name {
+    font-weight: 500;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 975px) {
+    .container {
+        width: 375px;
+    }
+    
+    .work,
+    .play,
+    .study,
+    .exercise,
+    .social,
+    .self-care {
+        height: 150px;
+    }
+
+    .report-for {
+        margin-top: 90px;
+        height: 180px;
+    }
+
+    .report-for .report-inner img {
+        width: 70px;
+        border: 2px solid white;
+        border-radius: 100%;
+    }
+
+    .current-time {
+        font-size: 36px;
+        position: absolute;
+        margin-top: 20px;
+        margin-left: -20px;
+    }
+
+    .last-time {
+        position: absolute;
+        right: 20px;
+        font-size: 15px;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    .report-inner .inside {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .report-header {
+        position: absolute;
+        margin-left: 90px;
+        margin-top: -10px;
+    }
+
+    .activity-name {
+        position: absolute;
+    }
+
+    .report-buttons .buttons .inside{
+        flex-flow: row nowrap;
+    }
+
+    .inside a {
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-bottom: -15px;
+    }
+}
